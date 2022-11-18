@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/photon.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Your Favorite SuperHero</title>
+</head>
+
+<body>
+    <div class="window">
+        <header class="toolbar toolbar-header center">
+            <span class="title" id="cabecera">superhero list</span>
+        </header>
+
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane sidebar padded-more">
+                    <h2>superhero:</h2>
+                    <div id="lista">
+
+                    </div>
+                    <hr>
+                    <h2>your vote:</h2>
+                    <span>your name:</span>
+                    <input class="form-control" type="text" id="nombre" placeholder="Type ur name">
+                    <button class="btn btn-large btn-positive" id="votar">Vote for this superhero</button>
+                </div>
+
+                <div class="pane padded-more">
+                    <div id="fotoSuperheroe">
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer class="toolbar toolbar-footer center">
+                <button class="btn btn-primary btn-large" id="anterior">
+                    <span class="icon icon-left-bold"></span>
+                </button>
+                <button class="btn btn-primary btn-large" id="siguiente">
+                    <span class="icon icon-right-bold"></span>
+                </button>
+        </footer>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

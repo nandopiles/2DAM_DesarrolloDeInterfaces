@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Q",
+        "author": "Luther Blissett",
+        "price": "20",
+        "img": "0.jpg",
+        "resenya": "La obra se desarrolla a lo largo de treinta años por distintos países de la Europa de la Contrarreforma, y en ella decenas de personajes conforman un prodigioso fresco de la epoca. Así pues, Q es una novela histórica, pero tambien, y ante todo, es una novela de aventuras y espionaje donde el verdadero protagonista es la multitud: herejes, espías, putas, cortesanos, mercenarios, profetas improvisados, siervos..."
+    },
+    {
+        "title": "El amor en tiempos cólera",
+        "author": "Gabriel García Márquez",
+        "price": "24",
+        "img": "1.jpg",
+        "resenya": "García Márquez traza la historia de un amor que no ha sido correspondido por medio siglo. Aunque nunca parece estar propiamente contenido, el amor fluye a través de la novela de mil maneras: alegre, melancólico, enriquecedor, siempre sorprendente."
+    },
+    {
+        "title": "El tambor de hojalata",
+        "author": "Günter Grass",
+        "price": "11",
+        "img": "6.jpg",
+        "resenya": "skar Matzerath, uno de los personajes literarios más entrañables de nuestro tiempo, es un niño que se resiste a crecer porque la sociedad pequeñoburguesa del nazismo no le gusta. Tambien es un malevolo enano que destroza cristales; un ser vulnerable, enamorado siempre de alguna mujer a la que idealiza; un superdotado obsesionado por el sexo; un ser de pestañas negras y bellas manos y un repulsivo jorobado; un asesino por encima de cualquier moralidad que no vacila en eliminar a quien lo molesta pero consigue crear con su tambor una música arrebatadora."
+    }
+]

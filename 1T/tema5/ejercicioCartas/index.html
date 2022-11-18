@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/xel/xel.js" type="module"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="xel-theme" content="node_modules/xel/themes/fluent.css">
+    <meta name="xel-accent-color" content="blue">
+    <meta name="xel-size" content="medium">
+    <meta name="xel-iconsets" content="node_modules/xel/iconsets/material.svg">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/photon.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/photon.min.css">
+    <title>Cartas</title>
+</head>
+
+<body>
+    <div class="window">
+        <header class="toolbar toolbar-header">
+        </header>
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane-sm sidebar">
+                    <div id="credito"></div>
+                    
+                    <hr>
+                    <span>Apuesta</span>
+                    <input class="form-control" type="number" id="apuesta">
+                    <select class="form-control" id="palos">
+                        <option value="Bastos">Bastos</option>
+                        <option value="Oros">Oros</option>
+                        <option value="Espadas">Espadas</option>
+                        <option value="Copas">Copas</option>
+                    </select>
+                    <hr>
+                    <button id="btn-apostar" class="btn btn-large btn-positive">Apostar</button>
+                    <button id="btn-reset" class="btn btn-large btn-positive">Reset</button>
+                </div>
+                <div class="pane wrapper">
+                    <img src="./images/dorso.png" id="carta1">
+                    <img src="./images/dorso.png" id="carta2">
+                    <img src="./images/dorso.png" id="carta3">
+                    <img src="./images/dorso.png" id="carta4">
+                    <img src="./images/dorso.png" id="carta5">
+                    <img src="./images/dorso.png" id="carta6">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <x-notification id='notification' timeout="3000"></x-notification>
+    <script src="./app.js"></script>
+</body>
+
+</html>
