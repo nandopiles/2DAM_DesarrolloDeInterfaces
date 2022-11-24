@@ -17,6 +17,7 @@ let newLibros = new Array()
 let estado = 0
 let i = 0
 let tablaFormada = ""
+let thisIsLibro = true
 
 
 /**
@@ -66,17 +67,24 @@ infoLibros.innerHTML = tablaFormada
 
 for (let i = 0; i < libros.length; i++) {
     document.getElementById("fotoTabla" + i).addEventListener('click', () => {
-        contenedorDesplegable.innerHTML = mostrarDesplegable(i)
+        if (estado == 1) {
+            contenedorDesplegable.innerHTML = mostrarDesplegable(i)
+        }
     })
 }
 
+/**
+ * Checkear la opción de si es un Libro o un Cómic
+ * @param {*} i 
+ * @returns 
+ */
 let esLibro = (i) => {
     let cad = ""
 
     if (libros[i].eslibro) {
-        cad = `<div class="radio" id="btnIsLibro">
+        cad = `<div class="radio">
             <label>
-                <input type="radio" name="radios" checked>
+                <input type="radio" name="radios" id="btnIsLibro" checked>
                 Libro
             </label>
         </div>
@@ -86,6 +94,7 @@ let esLibro = (i) => {
                 Comic
             </label>
         </div>`
+        thisIsLibro = true
     } else {
         cad = `<div class="radio">
             <label>
@@ -93,12 +102,13 @@ let esLibro = (i) => {
                 Libro
             </label>
         </div>
-        <div class="radio" id="btnIsComic">
+        <div class="radio">
             <label>
-                <input type="radio" name="radios" checked>
+                <input type="radio" name="radios" id="btnIsComic" checked>
                 Comic
             </label>
         </div>`
+        thisIsLibro = false
     }
     return cad
 }
@@ -137,13 +147,17 @@ btnMostrar.addEventListener('click', () => {
 
         let btnActualizar = document.getElementById("actualizar")
         btnActualizar.addEventListener("click", () => {
-            console.log(titulo.value + " " + i)
+            if (thisIsLibro) {
+                let libroCheck = document.getElementById("btnIsLibro")
+            } else {
+                let comicCheck = document.getElementById("btnIsComic")
+            }
             newLibros[i].title = titulo.value
             newLibros[i].author = autor.value
             newLibros[i].price = precio.value
-            if (btnIsLibro.value) {
+            if (libroCheck.value) {
                 newLibros[i].eslibro = true
-            } else if (btnIsComic.value) {
+            } else if (comicCheck.value) {
                 newLibros[i].eslibro = false
             }
             console.log(newLibros[i].title + " " + newLibros[i].author + " " + newLibros[i].price)
@@ -155,7 +169,3 @@ btnMostrar.addEventListener('click', () => {
         estado = 0
     }
 })
-
-let btnIsLibro = document.getElementById("btnIsLibro")
-let btnIsComic = document.getElementById("btnIsComic")
-
