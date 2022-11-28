@@ -1,0 +1,19 @@
+.wrapper {
+    border: 2px solid #fafafc;
+    border-radius: 5px;
+    background-color: #fbfbfd;
+}
+
+.wrapper>div {
+    border: 2px solid #ece9f0;
+    border-radius: 5px;
+    background-color: #4167f2;
+    padding: 1em;
+    color: #f7f1f1;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
