@@ -6,11 +6,9 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "Nando",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@electron/remote": "^2.0.8",
-    "electron": "^21.3.4",
     "mongodb": "^4.13.0"
   }
 }

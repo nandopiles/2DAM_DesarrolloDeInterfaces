@@ -1,12 +1,11 @@
 //MONGO
 const { MongoClient } = require('mongodb')
-const recurso = 'http://127.0.0.1:8080/public/'
 //cadena de conexión
-const url = 'mongodb://localhost:27017'
+const url = 'mongodb+srv://admin:admin@nutgod.adcito8.mongodb.net'
 //instanciar cliente de mongo
 const client = new MongoClient(url)
 //base de datos a usar
-const dbName = 'formulario'
+const dbName = 'Formulario'
 
 let collection
 let clientes
@@ -16,7 +15,7 @@ async function basededatos() {
     const db = client.db(dbName)   //que base de datos va a usar
     collection = db.collection('clientes')//que colección 'tabla' va a usar
 
-    //recupero datos de preguntas
+    //recupero datos de clientes
     clientes = await collection.find({}).toArray()
 }
 
@@ -93,7 +92,7 @@ basededatos()
 
         actualizar.addEventListener("click", async () => {
             await client.connect()
-            let resultadoUpdate = await collection.updateOne(
+            await collection.updateOne(
                 {
                     dni: clientes[posicion].dni,
                     nombre: clientes[posicion].nombre,

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+
+        <title>BookStore</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <nav
+            class="navbar bg-body-tertiary fixed-top bg-dark"
+            data-bs-theme="dark"
+        >
+            <div class="container-fluid">
+                <p class="fs-2 fw-bold" style="color: aliceblue">
+                    Your Book Store
+                </p>
+                <!-- Botón de Cesta -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"
+                        />
+                    </svg>
+                </button>
+                <!-- Botón de Cesta -->
+
+                <!-- Sidebar -->
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <!-- Header Sidebar -->
+                    <div class="offcanvas-header">
+                        <h4 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            Cesta Libros
+                        </h4>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <!-- Header Sidebar -->
+
+                    <!-- Body Sidebar -->
+                    <div class="offcanvas-body">
+                        <ul
+                            class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                        ></ul>
+                    </div>
+                    <!-- Body Sidebar -->
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </nav>
+        <!-- Header -->
+
+        <!-- Gallery -->
+        <div class="container" style="padding-top: 90px">
+            <div class="row">
+                <div class="col" style="background-color: red">
+                    One of three columns
+                </div>
+                <div class="col">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boat on Calm Water"
+                    />
+                </div>
+                <div class="col">One of three columns</div>
+                <div class="col">aa</div>
+            </div>
+            <div class="row">
+                <div class="col">One of three columns</div>
+                <div class="col">aa</div>
+                <div class="col" style="background-color: rgb(227, 227, 227);text-align: justify;">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Wintry Mountain Landscape"
+                    />
+                    <p>aguas</p>
+                </div>
+                <div class="col">aa</div>
+            </div>
+        </div>
+        <!-- Gallery -->
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+    ></script>
+</html>
