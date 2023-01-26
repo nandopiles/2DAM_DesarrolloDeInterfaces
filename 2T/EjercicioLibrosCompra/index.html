@@ -21,30 +21,17 @@
             data-bs-theme="dark"
         >
             <div class="container-fluid">
-                <p class="fs-2 fw-bold" style="color: aliceblue">
-                    Your Book Store
-                </p>
+                <p class="fs-2 fw-bold text-warning">Your Book Store</p>
                 <!-- Botón de Cesta -->
                 <button
-                    class="navbar-toggler"
+                    class="navbar-toggler rounded btn btn-warning active"
                     type="button"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-bag-fill"
-                        viewBox="0 0 16 16"
-                    >
-                        <path
-                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"
-                        />
-                    </svg>
-                </button>
+                    id="btnBuy"
+                ></button>
+                
                 <!-- Botón de Cesta -->
 
                 <!-- Sidebar -->
@@ -57,7 +44,7 @@
                     <!-- Header Sidebar -->
                     <div class="offcanvas-header">
                         <h4 class="offcanvas-title" id="offcanvasNavbarLabel">
-                            Cesta Libros
+                            Shopping Cart
                         </h4>
                         <button
                             type="button"
@@ -69,11 +56,7 @@
                     <!-- Header Sidebar -->
 
                     <!-- Body Sidebar -->
-                    <div class="offcanvas-body">
-                        <ul
-                            class="navbar-nav justify-content-end flex-grow-1 pe-3"
-                        ></ul>
-                    </div>
+                    <div class="offcanvas-body" id="sidebarBody"></div>
                     <!-- Body Sidebar -->
                 </div>
                 <!-- Sidebar -->
@@ -83,36 +66,12 @@
 
         <!-- Gallery -->
         <div class="container" style="padding-top: 90px">
-            <div class="row">
-                <div class="col" style="background-color: red">
-                    One of three columns
-                </div>
-                <div class="col">
-                    <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                        class="w-100 shadow-1-strong rounded mb-4"
-                        alt="Boat on Calm Water"
-                    />
-                </div>
-                <div class="col">One of three columns</div>
-                <div class="col">aa</div>
-            </div>
-            <div class="row">
-                <div class="col">One of three columns</div>
-                <div class="col">aa</div>
-                <div class="col" style="background-color: rgb(227, 227, 227);text-align: justify;">
-                    <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-                        class="w-100 shadow-1-strong rounded mb-4"
-                        alt="Wintry Mountain Landscape"
-                    />
-                    <p>aguas</p>
-                </div>
-                <div class="col">aa</div>
-            </div>
+            <div class="row text-center text-lg-start" id="gallery"></div>
         </div>
         <!-- Gallery -->
     </body>
+
+    <script src="app.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

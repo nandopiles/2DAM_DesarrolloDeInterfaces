@@ -1,0 +1,19 @@
+.coverGeneral {
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+}
+
+.coverPhoto {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 179, 87);
+    border-radius: 5px;
+}
