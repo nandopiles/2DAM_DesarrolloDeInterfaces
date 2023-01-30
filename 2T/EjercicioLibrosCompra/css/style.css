@@ -17,3 +17,12 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(255, 179, 87);
     border-radius: 5px;
 }
+
+.scrollbar-style::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scrollbar-style::-webkit-scrollbar-thumb {
+    background-color: rgb(160, 160, 160);
+    border-radius: 5px;
+}

@@ -33,7 +33,8 @@ let showImagesCover = () => {
     libros.forEach((element, index) => {
         images += `
                 <div class="col-lg-3 col-md-4 col-6 coverGeneral border" id="book${index}">
-                    <img class="img-fluid rounded mx-auto d-block img-thumbnail coverPhoto" src="images/${element.img}" alt="image${index}">
+                    <img class="rounded mx-auto d-block img-thumbnail coverPhoto" src="images/${element.img}" alt="image${index}">
+                    <br/>
                     <b>${element.title}</b>
                     <p>${element.author}</p>
                 </div>`
