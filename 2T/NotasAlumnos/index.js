@@ -1,6 +1,5 @@
 const { dialog } = require('@electron/remote')
 const fs = require('fs')
-
 //npm i @electron/remote
 
 let datosAlumnos
@@ -42,14 +41,22 @@ document.getElementById("open-explorer").addEventListener('click', () => {
     document.getElementById("lista-alumnos").innerHTML = studentsTable
 })
 
+let fileSave
+
 document.getElementById("save-marks").addEventListener('click', () => {
     if (file != null) {
         datosAlumnos.forEach((student, index) => {
-            console.log(student.nota)
-            student.nota = document.getElementById("mark-student" + index).value
+            student.nota = document.getElementById("mark-student" + index).innerHTML
             console.log(student.nota)
         });
-        //fs.writeFileSync(file[0], JSON.stringify(datosAlumnos))
+        fileSave = dialog.showSaveDialogSync({
+            title: "Abriendo Datos JSON",
+            defaultPath: "E:\\DAM_7J\\DAM_DesarrolloDeInterfaces\\2T\\NotasAlumnos\\files\\", //path dónde se abrira el Explorador de Archivos
+            filters: [
+                { name: 'Custom File Type', extensions: ['json'] }
+            ]
+        })
+        fs.writeFileSync(fileSave, JSON.stringify(datosAlumnos))
         console.log("[+] Marks Updated")
     } else {
         console.log("[-] U have to open a file")
