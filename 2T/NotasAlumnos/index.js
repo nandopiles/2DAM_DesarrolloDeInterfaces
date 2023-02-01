@@ -41,15 +41,13 @@ document.getElementById("open-explorer").addEventListener('click', () => {
     document.getElementById("lista-alumnos").innerHTML = studentsTable
 })
 
-let fileSave
-
 document.getElementById("save-marks").addEventListener('click', () => {
     if (file != null) {
         datosAlumnos.forEach((student, index) => {
             student.nota = document.getElementById("mark-student" + index).innerHTML
             console.log(student.nota)
         });
-        fileSave = dialog.showSaveDialogSync({
+        let fileSave = dialog.showSaveDialogSync({
             title: "Abriendo Datos JSON",
             defaultPath: "E:\\DAM_7J\\DAM_DesarrolloDeInterfaces\\2T\\NotasAlumnos\\files\\", //path dónde se abrira el Explorador de Archivos
             filters: [
@@ -57,7 +55,7 @@ document.getElementById("save-marks").addEventListener('click', () => {
             ]
         })
         fs.writeFileSync(fileSave, JSON.stringify(datosAlumnos))
-        console.log("[+] Marks Updated")
+        console.log("[+] Marks Saved")
     } else {
         console.log("[-] U have to open a file")
     }
