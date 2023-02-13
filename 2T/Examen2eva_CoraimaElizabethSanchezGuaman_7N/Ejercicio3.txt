@@ -1,0 +1,14 @@
+Explica con tus palabras lo que es una API. ¿Es Express una API?¿Es node-fetch 
+una API? ¿Porqué? Explica cómo funcionan las aplicaciones cliente-servidor 
+que hemos hecho en clase.
+
+Las APIs o interfaces de programación de aplicaciones son construcciones que hay en los lenguajes de programación que ayudan a
+los desarrolladores a crear funciones complejas de una manera simple y rápidas. Es decir, Lo que hacen es quitar el código más complejo 
+para ofrecer una sintaxis más fácil de usar.También se podria decir que las APIs funcionan como un puente entre las aplicaciones,
+lo que les permite comunicarse de manera más eficiente. Las API puedenclasificarse en varios tipos como Web API,API HTTP, API REST y muchas más.
+
+Express es un framework para node, que nosotros usamos para generar servicios REST.
+
+
+Las actividades cliente servidor funcionan de manera que al lanzar el servidor y luego el cliente (si lo haces al revés no funciona porque
+al no estar lanzado el servidor el cliente no puede conectarse) el cliente se conecta al servidor recibiendo todo lo que este envíe.
