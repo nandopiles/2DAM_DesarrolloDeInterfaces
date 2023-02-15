@@ -1,5 +1,5 @@
 {
-  "name": "electrodomesticoscss",
+  "name": "plantilla",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^21.4.1"
+    "electron": "^23.0.0",
+    "mongodb": "^5.0.1"
   }
 }
